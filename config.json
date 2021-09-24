@@ -1,0 +1,142 @@
+{
+    "Iva":0,
+    "Informacion":{
+        "Tipo-De-Factura": "Plantilla de factura para realizar compras"
+    },
+    "Header":{
+        "Logo":"./img/logo1.jpg",
+        "Empresa": {
+            "Nombre": "Sistema de facturacion CALZADO JAYSPER",
+            "NIT":"No Registrado XXXX",
+            "Direccion": "Calle 105a #21-18",
+            "Departamento":"Colombia, Bucaramanga-Santander."
+        },
+        "Contactos":{
+            "Sito Web":[
+                {
+                    "Nombre":"www.sistemasweb.la",
+                    "Valor":"https://www.unc.edu.co/educacion-continua/"
+                }
+            ],
+            "Correo Electronico":[
+                {
+                    "Nombre":"james_2005_scott@hotmail.com",
+                    "Valor":"mailto:james_2005_scott@hotmail.com"
+                }
+            ],
+            "Telefono":[
+                {
+                    "Nombre": "+607 6041872 ",
+                    "Valor": 6041872
+                }
+            ],
+            "Celular":[
+                {
+                    "Nombre": "+57 345908559",
+                    "Valor": 345908559
+                }
+            ],
+            "Redes-Sociales":[
+                {
+                    "Nombre": "Twitter",
+                    "Valor": "@alvarado_obed"
+                }
+            ]
+        },
+    "Comentario":"//Datos enviados por el formulario",
+        "Token-Verificacion":{
+            "Nombre-Banco":"Davivienda",
+            "Producto":"Daviplata",
+            "Nombre-Titular":"JAIME ANDRES LOPEZ CHACON",
+            "Tonken-Validacion":"gbh-5465fd-5449sdf-sdfsdf",
+            "Token-Aprobacion":"tyh-sdfss-sefse-sefse",
+            "Cuenta-Bancaria":"6324-8426-8416-5976"
+        }
+    },
+    "Comentario":"//Datos enviados por el formulario",
+    "Section-Autorizacion":{
+        "Facturado":{
+            "FechaDeFactura":"07-09-2021",
+            "NumeroDeFactura": "BG-100-2845-6",
+            "FechaDeVencimiento":"14-09-2021"
+        },
+        "Responsable":{
+            "Nombre":"Jaime Andres Lopez Chacon",
+            "Empresa":"Calzado Jaysper",
+            "DireccionCompleta":"Calle 105a #21-18",
+            "Contactos":{
+            "Telefono":[
+                {
+                    "Indicativo":"+607",
+                    "Numero": 6550585
+
+                }
+            ],
+            "Celular":[
+                {
+                    "Indicativo":"+57",
+                    "Numero":"3005463323"
+                }
+            ]
+            }
+        },
+        "Autorizacion":{
+            "Nombre":"Miguel Angel Castro Escamilla",
+            "Empresa":"Fundacion universitaria de confenalco",
+            "Dirrecion-Completa":"Calle 11",
+            "Contactos":{
+                "Telefono":[
+                    {
+                        "Indicativo": "+607",
+                        "Numero": 6300159
+                    }
+                ],
+                "Celular":[
+                    {
+                        "Indicativo": "+57",
+                        "Numero": 3041782344
+                    }
+                ]
+            }
+        }
+    },
+    "Comentario2":"//Datos enviados por el formulario",
+    "Section-Detalle":{
+        "Proveedor":[
+            {
+                "N-Vendedor":"DHL",
+                "Nombre":"Jaime Andres Lopez Chacon",
+                "Orden-Compra":"#PO-2020",
+                "Términos-y-condiciones":"Pago al contado"
+            },
+            {
+                "N-Vendedor":"FUN",
+                "Nombre":"Luis Felipe Melo Carrillo",
+                "Orden-Compra":"#PO-2021",
+                "Términos-y-condiciones":"Pago al contado efectivo-tarjeta de credito"
+            }
+        ],
+        "Compra":[
+            {
+                "N-Vendedor":"DHL",
+                "Codigo": 123,
+                "Descripcion":"Computador",
+                "Cantidad": 2,
+                "Precio": 2000000,
+                "Iva": 16
+            },
+            {
+                "N-Vendedor":"FUN",
+                "Codigo": 456,
+                "Descripcion":"Camisa",
+                "Cantidad": 10,
+                "Precio": 20000,
+                "Iva": 19
+            }
+        ]
+    },
+    "Footer": {
+        "Mensaje":"El monto de la factura no incluye el impuesto sobre las ventas."
+    }
+
+}

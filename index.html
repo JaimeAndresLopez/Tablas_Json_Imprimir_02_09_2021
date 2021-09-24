@@ -1,0 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="sp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+  </head>
+
+<body>
+  <div class="control-bar">
+    <div class="container">
+      <div class="row">
+        <div class="col-2-4">
+          <div id="tipoDeFactura" class="slogan"> </div>
+        </div>
+        <div class="col-4 text-right">
+          <a href="javascript:window.print()">Imprimir</a>
+        </div>
+        <!--.col-->
+      </div>
+      <!--.row-->
+    </div>
+    <!--.container-->
+  </div>
+  <!--.control-bar-->
+
+  <header class="row">
+    <div id="logo" class="logoholder text-center">
+      <!-- <img src="./img/logo.png"> -->
+    </div>
+    <!--.logoholder-->
+
+    <div class="me">
+      <p id="headerEmpresa">
+        <!-- <strong>Sistema Web S.A. de C.V.</strong><br>
+        234/90, New York Street<br>
+        United States.<br> -->
+      </p>
+    </div>
+    <!--.me-->
+
+    <div class="info">
+      <p id="headerContactos">
+        <!-- Web: <a href="http://volkerotto.net">www.sistemasweb.la</a><br>
+        E-mail: <a href="mailto:info@obedalvarado.pw">info@obedalvarado.pw</a><br>
+        Tel: +456-345-908-559<br>
+        Twitter: @alvarado_obed -->
+      </p>
+    </div><!-- .info -->
+
+    <div class="bank">
+      <p>
+        <canvas id="qr-code"></canvas>
+        <!-- Datos bacarios: <br>
+        Titular de la cuenta: <br>
+        IBAN: <br>
+        BIC: -->
+      </p>
+    </div>
+    <!--.bank-->
+
+  </header>
+
+
+  <div class="row section">
+
+    <div class="col-2">
+      <h1 contenteditable>Factura</h1>
+    </div>
+    <!--.col-->
+
+    <div class="col-2 text-left details">
+      <p>
+        <svg id="barcode"></svg>
+        <!-- Fecha: <input type="text" class="datePicker" /><br>
+        Factura #: <input type="text" value="100" /><br>
+        Vence: <input class="twoweeks" type="text" /> -->
+      </p>
+    </div>
+    <!--.col-->
+
+
+
+    <div class="col-2">
+
+
+      <p  id="responsable" class="client">
+        <!-- <strong>Facturar a</strong><br>
+        [Nombre cliente]<br>
+        [Nombre empresa]<br>
+        [Dirección empresa]<br>
+        [Tel empresa] -->
+      </p>
+    </div>
+    <!--.col-->
+
+
+    <div class="col-2">
+
+
+      <p id="aprobado" class="client">
+        <!-- <strong>Enviar a</strong><br>
+        [Nombre cliente]<br>
+        [Nombre emmpresa]<br>
+        [Dirección empresa]<br>
+        [Tel empresa] -->
+      </p>
+    </div>
+    <!--.col-->
+
+
+
+  </div>
+  <!--.row-->
+
+  <div class="row section" style="margin-top:-1rem">
+    <div class="col-1 invoicelist-body2">
+      <table style='width:100%'>
+        <thead>
+          <tr  class="invoice_detail">
+            <th width="20%">Proveedor</th>
+            <th width="22%" style="text-align:center;">Vendedor</th>
+            <th width="22%">Orden de compra </th>
+            <th width="36%">Términos y condiciones</th>
+          </tr>
+        </thead>
+        <tbody id="sectionDetalleProveedor">
+          <!-- <tr class="invoice_detail">
+            <td width="20%">DHL</td>
+            <td width="25%" style="text-align:center;">John Doe</td>
+            <td width="25%">#PO-2020 </td>
+            <td width="30%">Pago al contado</td>
+          </tr> -->
+        </tbody>
+      </table>
+      <a id="nuevaFilaVendedor" class="control newRow" href="#">+ Nueva fila</a>
+    </div>
+
+  </div>
+  <!--.row-->
+
+  <div class="invoicelist-body">
+    <table>
+      <thead>
+        <th width="5%">Vendedor</th>
+        <th width="5%">Código</th>
+        <th width="50%">Descripción</th>
+
+        <th>Cant.</th>
+        <th width="20%">Precio U/N</th>
+        <th width="18%" class="taxrelated">IVA</th>
+        <th width="10%">Total</th>
+      </thead>
+      <tbody id="sectionDetalleCompra">
+        <!-- <tr>
+          
+        </tr> -->
+      </tbody>
+    </table>
+    <a id="nuevaFilaCompra" class="control newRow" href="#">+ Nueva fila</a>
+  </div>
+  <!--.invoice-body-->
+
+  <div class="invoicelist-footer">
+    <table>
+      <tr>
+        <td>Sub Total IVA:</td>
+        <td id="subIvaApagar">0</td>
+      </tr>
+      <tr class="taxrelated">
+        <td>IVA:</td>
+        <td id="ivaApagar"></td>
+      </tr>
+      <tr>
+        <td><strong>Total:</strong></td>
+        <td id="totalApagar"></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="note" contenteditable>
+    <h2>Nota:</h2>
+  </div>
+  <!--.note-->
+
+  <footer class="row">
+    <div class="col-1 text-center">
+      <p id="FooterMensaje" class="notaxrelated" ><!--El monto de la factura no incluye el impuesto sobre las ventas.--></p>
+
+    </div>
+  </footer>  
+</body>
+
+</html>
